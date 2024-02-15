@@ -6,7 +6,7 @@ function Todolist (){
         setAr([...ar,x])
     }
     console.log(ar);
-    return (<div style={{marginTop:'20px',border:'2px solid',padding:'70px'}}>
+    return (<div style={{marginTop:'20px',border:'2px solid',padding:'70px'}} className="rounded shadow">
 
             <h1>Add Your Todo Tasks</h1><br />
             <input type="text" onKeyUp={(e)=>{setX(e.target.value)}} />

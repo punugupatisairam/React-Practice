@@ -10,7 +10,7 @@ function Counter(){
     const reset = ()=>{
         setC(0)
     }
-    return <div className="border border-black p-5">
+    return <div className="border border-black p-5 rounded shadow" >
             <h2>Counter : {c}</h2>
             <button onClick={()=>{inc()}}>Increment</button>
             <button onClick={()=>{dec()}}>Decrement</button>
