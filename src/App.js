@@ -6,7 +6,7 @@ import Footer from './footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="border border-primary border-2 p-5 m-2" >
      <Header/>
      <Mainarea/>
      <Footer/>
