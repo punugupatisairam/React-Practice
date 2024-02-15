@@ -7,6 +7,7 @@ function App() {
     <div >
      <h1>Hai</h1>
       <Counter/>
+      <Counter/>
     </div>
   );
 }
