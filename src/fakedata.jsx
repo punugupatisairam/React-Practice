@@ -1,5 +1,7 @@
-import axios from "axios";
 import React from "react";
+import axios from "axios";
+import { useEffect } from "react";
+
 
 function Fake() {
     var [countries, setCountries] = React.useState();
@@ -17,3 +19,4 @@ function Fake() {
       }
       </div>;
   }
+  export default Fake
