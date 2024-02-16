@@ -5,17 +5,25 @@ function Todolist (){
     const additem= ()=>{
         setAr([...ar,x])
     }
+    function del(index){
+        ar.splice(index,1)
+        setAr([...ar])
+    }
+    const y = React.useRef(null)
     console.log(ar);
     return (<div style={{marginTop:'20px',border:'2px solid',padding:'70px'}} className="rounded shadow">
 
             <h1>Add Your Todo Tasks</h1><br />
-            <input type="text" onKeyUp={(e)=>{setX(e.target.value)}} />
+            <input type="text" ref={y} onKeyUp={(e)=>{setX(e.target.value)}} />
             <button onClick={()=>{additem()}}>Add Items</button>
+
 
             <ul>
                 {
-                    ar.map((item)=>{
-                        return <li style={{listStyle:'none'}}>{item}</li>
+                    ar.map((item,index)=>{
+                        return <li style={{listStyle:'none'}}>{item} 
+                        <button onClick={()=>{del()}}>Delete</button>
+                        </li>
                     })
                 }
             </ul>
