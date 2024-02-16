@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Score from './scorecount';
+import axios from 'axios';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  var da = [];
+  axios.get('https://restcountries.com/v3/all').then((res)=>{
+    // console.log(res.data);
+    da=res.data;
+
+  })
+  
+  return (<div className="App">
+      <Score tname='India' start={10}  inc ={5}  ></Score>
+      <Score tname='Australia' start={200} inc={12}></Score>
+      {
+        da.map((e)=>{
+          return <li>{e.name.common}</li>
+
+        })
+      }
     </div>
   );
 }
