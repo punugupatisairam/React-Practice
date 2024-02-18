@@ -16,8 +16,6 @@ function Todolist (){
             <h1>Add Your Todo Tasks</h1><br />
             <input type="text" ref={y} onKeyUp={(e)=>{setX(e.target.value)}} />
             <button onClick={()=>{additem()}}>Add Items</button>
-
-
             <ul>
                 {
                     ar.map((item,index)=>{
@@ -27,6 +25,5 @@ function Todolist (){
                     })
                 }
             </ul>
-
            </div>)
-}export default Todolist 
+}export default Todolist  
