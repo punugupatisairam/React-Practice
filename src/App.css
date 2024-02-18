@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 10px;
+   
+}
+.mdiv{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid;
+    background-color: lemonchiffon;
+    height: 70px;
+}
+.navlist{
+    border-radius: 5px;
+    background-color: aqua;
+    padding: 5px;
+    margin: 5px;
+}
+.count{
+    background-color: chocolate;
+    padding: 5px;
+    border-radius: 5px;
+}
