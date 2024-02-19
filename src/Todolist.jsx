@@ -7,7 +7,7 @@ function Todo(){
     setAR([...ar,newitem])
     }
 
-    return <div>
+    return <div className="border border-2 border-danger h-20 p-20">
         <input type="text" id="inp" />
         <button onClick={()=>{add()}}>Add task</button>
         {

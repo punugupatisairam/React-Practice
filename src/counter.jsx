@@ -7,7 +7,7 @@ function Counter() {
     function dec(){
         setC(c-1)
     }
-    return <div>
+    return <div className="border border-warning border-2 p-25">
         <div>Counter : <span>{c}</span> </div>
         <button onClick={()=>{inc()}}>Increment</button>
         <button onClick={()=>{dec()}}>Decrement</button>
