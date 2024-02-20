@@ -13,14 +13,14 @@ function Fakedata(){
     
     },[]);
   
-    return (<div className=" d-flex  flex-wrap justify-content-around ">
+    return (<div className=" mdiv">
       {
         
           countries.map((e)=>{
 
             return (
-              <div className="w-20 border m-4 text-center shadow p-3 bg-color-warning">
-                <img className="images" src={e.image} width='100px'/><br />
+              <div className="itediv">
+                <img className="images" src={e.image} /><br />
                 <span>{e.title}</span><br />
                 <span>{e.price}</span> &nbsp; &nbsp;&nbsp;
                 <span>{e.rating.rate}</span>
@@ -31,3 +31,4 @@ function Fakedata(){
       </div>)
 }
 export default Fakedata 
+
