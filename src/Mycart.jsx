@@ -1,8 +1,8 @@
 import React from "react";
-import axios from 'axios'
+import axios from 'axios';
 function Cart(){
 
-    var [items,setItems] = React.useState([])
+    var [items,setItems] = React.useState([])                        
     React.useEffect(()=>{
         axios.get('https://dummyjson.com/carts').then((res)=>{
         console.log(res.data);
@@ -14,7 +14,7 @@ function Cart(){
         var temp = [...items]
         temp=temp.map((titem)=>{
                 if(titem.id==item.id){
-                    titem.quantity=titem.quantity+1
+                    titem.quantity=titem.quantity+1;
                     
                 }
                 return titem
