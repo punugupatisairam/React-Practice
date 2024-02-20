@@ -24,8 +24,8 @@ function Fakedata(){
                 <span>{e.title}</span><br />
                 <span>{e.price}</span> &nbsp; &nbsp;&nbsp;
                 <span>{e.rating.rate}</span>
-            </div>
-            )
+                
+            </div>  )
                            })
       }
       </div>)
