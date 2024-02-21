@@ -13,9 +13,9 @@ function Todo(){
     setTODOITEMS([...temp])
     }
     return <div className="todo">
-        <input type="text" onKeyUp={(e)=>{ setX(e.target.value)}} />
-        <button onClick={()=>{addtodo()}}>Add Item</button>
-
+        <input className="inp"  class="form-control" type="text" onKeyUp={(e)=>{ setX(e.target.value)}} placeholder="Enter Your Todo's" /> <br />
+        <button  class="form-control bg-warning "  onClick={()=>{addtodo()}}>Add Item</button>
+ 
         <ul>
             {
                 todoitems.map((todo,i)=>{
