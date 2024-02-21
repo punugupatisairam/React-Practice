@@ -1,3 +1,4 @@
+ 
 import React, { useRef } from "react";
 import Operation from "./Operation";
 function Todo(){
@@ -12,7 +13,7 @@ function Todo(){
     setTODOITEMS([...temp])
     }
     return <div className="todo">
-        <input type="text" name="" id="" onKeyUp={(e)=>{ setX(e.target.value)}} />
+        <input type="text" onKeyUp={(e)=>{ setX(e.target.value)}} />
         <button onClick={()=>{addtodo()}}>Add Item</button>
 
         <ul>

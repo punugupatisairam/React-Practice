@@ -1,7 +1,7 @@
 import React from "react";
 function Operation(props){
     
-return <div className="m-2 border-rounded border border-info h-20 w-15"  >
+return <div className="m-2 border-rounded border border-info h-20 w-15 bg-info"  >
     {props.todo} &nbsp;&nbsp;
     <button onClick={()=>{props.delbtn(props.index)}}>Delete</button>
     <button>Undo</button>
@@ -9,4 +9,4 @@ return <div className="m-2 border-rounded border border-info h-20 w-15"  >
     <button>Edit</button>
 </div>
 }
-export default (Operation)
+export default Operation;
