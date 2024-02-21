@@ -1,13 +1,14 @@
 
-img{
+ img{
   width: 100px;
   height: 100px;
 }
+/*
 .mdiv{
   display: flex;
   flex-wrap: wrap;
   /* align-items: center; */
-  justify-content: center;
+  /* justify-content: center;
   border: 2px solid;
   width: 100%;
   height: 100%;
@@ -16,26 +17,52 @@ img{
 .itediv{
   
   margin: 30px;
-  align-items: center;
+  align-items: center; */
   /* justify-content: center; */
-  width: 20%;
+  /* width: 20%; */
   /* height: 20%; */
-  text-align: center;
+  /* text-align: center;
   background-color:lightyellow ;
   border-radius: 10px;
 }
 .mdiv :hover{
   box-shadow: 1px 1px 20px grey;
-  cursor: pointer;
+  cursor: pointer; */
 
 
-}
-
-
- 
-
+/* } */ 
 img{
   /* background-color: lemonchiffon; */
   mix-blend-mode:darken;
  
+}
+.productcard{
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  margin: 5px;
+  padding: 10px;
+
+}
+.list{
+  /* border: 2px solid; */
+  width: 20%;
+  margin: 10px;
+  
+}
+.productcard :hover{
+  box-shadow: 1px 1px 2px grey;
+}
+.maindiv{
+  display: flex;
+  border: 2px solid;
+
+}
+.cartdiv{
+  margin: 5px;
+  border: 2px solid;
+  width: 25%;
 }
