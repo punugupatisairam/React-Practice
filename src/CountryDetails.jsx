@@ -20,7 +20,7 @@ function CountryDetails() {
         countrydetails &&<div>
                   <img src={countrydetails.flags.png} alt="" /> 
                  <span>{countrydetails.name.common}</span>
-                 <span>{countrydetails.capital}</span>
+                 <span>{countrydetails.capital}</span>  
                  </div>
         }
       
