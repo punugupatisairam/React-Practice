@@ -5,21 +5,21 @@ import axios from 'axios';
 function CountryDetails() {
   let cparams =useParams();
   console.log(cparams);
-  let [countrydetails,setCountrydetails] = React.useState();
+  let [countrydetails,setCountrydetails] = React.useState(null);
 
   useEffect(()=>{
-    axios.get(`https://restcountries.com/v3.1/name/{name}/${cparams.cname}?fullText=true`).then((res)=>{
-          setCountrydetails(res.data)
+    axios.get(`https://restcountries.com/v3.1/name/${cparams.cname}?fullText=true`).then((res)=>{
+          setCountrydetails(res.data[0])
           console.log(res);
     })
 
-  },[])
+  },[cparams])
   return (
-    <div className='border border-black border-3 p-3'>
+    <div className='border border-black border-3'>
       {
         countrydetails &&<div>
-                  <img src={countrydetails.flags.png} alt="" /> 
-                 <span>{countrydetails.name.common}</span>
+                  <img src={countrydetails.flags.png} alt="" /> <br />
+                 <span>{countrydetails.name.common}</span><br />
                  <span>{countrydetails.capital}</span>  
                  </div>
         }
