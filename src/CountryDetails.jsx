@@ -3,17 +3,17 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function CountryDetails() {
-  let cparams = React.useParams();
+  let cparams =useParams();
   console.log(cparams);
   let [countrydetails,setCountrydetails] = React.useState();
 
   useEffect(()=>{
-    axios.get('https://restcountries.com/v3.1/name/{name}/${cparams.cname}?fullText=true').then((res)=>{
+    axios.get(`https://restcountries.com/v3.1/name/{name}/${cparams.cname}?fullText=true`).then((res)=>{
           setCountrydetails(res.data)
           console.log(res);
     })
 
-  })
+  },[])
   return (
     <div className='border border-black border-3 p-3'>
       {
