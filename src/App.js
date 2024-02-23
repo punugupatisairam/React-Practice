@@ -5,7 +5,7 @@ import Header from './Headertodo';
 function App() {
   return (
     <div className="App">
-     <Header/> <br/>
+      <br/>
     <Todo/>
     </div>
   );

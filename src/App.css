@@ -13,9 +13,11 @@
     /* border: 2px solid; */
     border-radius: 5px;
     margin: 6%;
+    margin-bottom: 1%;
     padding: 3%;
     text-align: start;
-    background-color:lightpink ;
+    /* background-color:lightpink ; */
+    background: linear-gradient( rgb(116, 43, 116), pink);
 }
 .countbutt{
     margin: 10px;
@@ -33,9 +35,91 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
 }
-.inp{
-   width: 30%;
-   margin: 30px;
-    background-color: red
+.inpdiv{
+   width: 88%;
+   margin-left: 6%;
+    
+}
+.addtodotext{
+    margin-top: 0px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+.data{
+    /* margin-top:10px; */
+    /* margin-left: 20px; */
+    padding: 25px;
+    color:blueviolet;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.todomaindiv:hover{
+    /* background-color: aqua; */
+    background: radial-gradient(circle, rgb(110, 60, 27), lightgreen);
+    
 
+}
+.status{
+    display: flex;
+    /* margin-top: 20px; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:cornflowerblue;
+    
+}
+.todomaindiv{
+    display: flex;
+    justify-content: space-between;
+    background-color: lavenderblush;
+    margin-top: 10px;
+    margin-left: 4%;
+    width: 89%;
+    border-radius: 5px;
+
+}
+.newtodoitem1{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+
+}
+.newtodoitem2{ 
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+  
+}
+.newtodotext{
+    color:greenyellow;
+    margin-left: 1%;
+    margin-top: 3%;
+}
+.buttonde{
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+}
+.buttond{
+    
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    background-color: green;
+}
+.buttonu{
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+.buttone{
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    background-color: yellow;
 }
