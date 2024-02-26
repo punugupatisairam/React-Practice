@@ -5,7 +5,7 @@ function Header({ar}){
             <div>
             <button className="countbutt">All &nbsp; <span className="countnum">{(ar.length)}</span></button>
             <button className="countbutt">Pending  &nbsp;<span className="countnum">{(ar.length)}</span></button>
-            <button className="countbutt">Completed  &nbsp;<span className="countnum">{2}</span></button>
+            <button className="countbutt">Completed  &nbsp;<span className="countnum">{ar.length}</span></button> 
             </div>
         </div>)
 
