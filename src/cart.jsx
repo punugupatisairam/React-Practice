@@ -12,17 +12,23 @@ function Cart({additem}){
                 return(
                     <>
                         {console.log("welcome to kart", product)}
-                        <div>
-                            <span>{product.product.title} - {product.product.quantity}</span>&nbsp;&nbsp;
+                        <div className="border border-2 w-10 h-20">
+                        <span> <img src={product.product.image} alt="" /></span> <br />
+                            <span>{product.product.title} &nbsp;  Qauntity :{product.product.quantity}</span>&nbsp;&nbsp;<br />
+                            <span>Price :{product.product.price * product.product.quantity}</span> &nbsp; 
+		                <span>rating :{product.product.rating.rate}</span><br />
                             {/* <button><span>-</span></button>{product.product.quantity}<button><span>+</span></button> */}
-                        </div>
-                        
+                        </div>             
+                       
                     </>
                     
                     
                 )
-            })
+            }) 
         }
+         <h1>Total : { additem?.reduce((sum,item)=>{
+            return sum+(item.quantity*item.price)
+         },0)} </h1>
         </>
     )
 }

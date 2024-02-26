@@ -5,11 +5,11 @@ import Cart from './cart';
 
 function App() {
   return (
-    <div className="App">
-      <Fakedata/>
+    <div className="App"> 
+      <Fakedata/> 
     
-    </div>
-  );
-}
+    </div>  
+  );  
+} 
 
 export default App;

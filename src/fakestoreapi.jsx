@@ -56,7 +56,7 @@ function Fakedata() {
 		product.quantity = 1;
 		setAdditem([...additem,{product}])
 	}
-	console.log("after quantity verification", product)
+	console.log("after quantity verification"+ product)
 	
 
   }
@@ -72,9 +72,9 @@ function Fakedata() {
 		<button className="btn btn-success" onClick={()=>{addToCart(product)}}>Add to Cart</button>
 		</ol>
       })}
-    </div >
+    </div > 
 	<div className="cartdiv"> 
-	<Cart additem={additem}/>
+	<Cart additem={additem}/> 
 	</div>
 	
 	</div>
