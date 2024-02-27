@@ -2,29 +2,38 @@ import logo from './logo.svg';
 import './App.css';
 // import { Formik, useFormik } from 'formik';
 import { Formik } from 'formik';
+import StudentDetails from './studentDetails';
 
 
 function App() { 
-return (
 
+return (
+ <div>
+  <StudentDetails></StudentDetails>
 <Formik
-  initialValues = {{'fn':'','ln':'','age':''}}
+  initialValues = {{'fn':'','ln':'','age':''}} 
   onSubmit={(fv)=>{console.log(fv);}}
   
   >
     {(userForm)=>{
 
       return (
-        <form onSubmit={userForm.handleSubmit}>
+      
+      <div>
+        <h1>Form Handling Using Formik element by import formik element</h1>
+          <form onSubmit={userForm.handleSubmit}>
           <input type='text' placeholder='Enter First Name' name='fn' onChange={userForm.handleChange} /> <br/>
           <input type='text' placeholder='Enter Last Name' name='ln' onChange={userForm.handleChange}/> <br/>
           <input type='text' placeholder='Enter Age Name' name='age' onChange={userForm.handleChange}/> <br/> <br/>
           <button type='sudmit'>save</button>
         </form>
+      </div>
       )   
     }
   } 
 </Formik>
+ </div>
+
 )
 
 
