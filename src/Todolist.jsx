@@ -6,6 +6,8 @@ function Todo(){
     // document.getElementById('update').innerHTML='Add Item'
     
     var [todoitems,setTODOITEMS] = React.useState([]);
+    var [action, setAction] = React.useState('Add Item');
+    var [operatingId, setOperatingId] = React.useState()
 
     const addtodo = ()=>{
         var newobj = {
@@ -17,6 +19,7 @@ function Todo(){
 
     function statusDone(index){
         let temp = [...todoitems]; 
+        
         const statuschangeitem  = temp.map((item,i) => { 
             console.log(index,i);
             if((index === i) && item.status === false){ 
@@ -33,18 +36,29 @@ function Todo(){
         setTODOITEMS([...statuschangeitem]);
     }
 
+    const update = (index) => {
+        let temp = todoitems.filter((item, ind) => index !== ind ); 
+        const edittedItem = temp.find((item, ind) => index === ind)
+        edittedItem.value = document.getElementById('inp').value;
+        setTODOITEMS([edittedItem, ...temp])
+        setAction('Add Item')
+    }
+
     function editTitle(index){
+        setAction('Update')
+        setOperatingId(index)
         let temp = [...todoitems]; 
             temp.map((item,i) => {
             if(index === i ) {
                 document.getElementById('inp').value = item.title;
-                document.getElementById('additem').innerHTML='update'  
-                // document.getElementById('update').style.display='inline-display' 
+                // document.getElementById('additem').innerHTML='update'  
+                // document.getElementById('update').style.display='inline-display'
+                
             }  
             else
             {
-                item.title=document.getElementById('inp').value ; 
-                document.getElementById('additem').innerHTML='Add Item'
+                // item.title=document.getElementById('inp').value ; 
+                // document.getElementById('additem').innerHTML='Add Item'
                 // document.getElementById('update').style.display='none'
                 // document.getElementById('additem').style.display='inline-block'
 
@@ -60,7 +74,6 @@ function Todo(){
     temp.splice(index,1)
     setTODOITEMS([...temp]) 
     }
-    
 
     return ( 
     <div className="todo">
@@ -68,7 +81,7 @@ function Todo(){
         <h1 className="addtodotext" >📝 Add Your Todo's : 📝 </h1>
         <div className="inpdiv">
         <input className="inp"  class="form-control " type="text" id="inp" placeholder="Enter Your Todo's" /> <br />
-        <button  class="form-control bg-warning " id="additem" onClick={()=>{addtodo()}}>Add Item</button>
+        <button  class="form-control bg-warning " id="additem" onClick={()=>{action === 'Update' ? update(operatingId) : addtodo()}}>{action}</button>
         
         {/* <button  class="form-control bg-warning " id="update" onClick={()=>{addtodo()}}>Update</button> */}
         <h1 className="newtodotext">All Your Todo's :</h1>
