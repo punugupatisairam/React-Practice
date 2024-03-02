@@ -13,7 +13,7 @@ function Cart({additem}){
                     <>
                         {console.log("welcome to kart", product)}
                         <div className="border border-2 w-10 h-20">
-                        <span> <img src={product.product.image} alt="" /></span> <br />
+                        <span> <img src={product.product.image} alt="" /></span> <br /> 
                             <span>{product.product.title} &nbsp;  Qauntity :{product.product.quantity}</span>&nbsp;&nbsp;<br />
                             <span>Price :{product.product.price * product.product.quantity}</span> &nbsp; 
 		                <span>rating :{product.product.rating.rate}</span><br />
