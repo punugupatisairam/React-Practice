@@ -1,24 +1,24 @@
 import React from 'react'
 
 
-function LoginForm() {
+function LoginForm(values) {
     let formik = ({
         intialvalues:{
           firstname:'',
           password:''
         },
-        onSubmit:((values)=>{
+        onsubmit:((values)=>{
             console.log(values);
         })
     })
-    
+    console.log(formik);
   return (
     <div>
-      <form onSubmit={formik.onSubmit} >
+      <form onSubmit={formik.handlesubmit} >
           <label htmlFor="">Name :</label>
-          <input type="text" onChange={formik. ()} />
+          <input type="text" name='firstname' onChange={formik.handlechange} /> <br /><br />
           <label htmlFor="">Password :</label>
-          <input type="text"  onChange={formik.onChange()} />
+          <input type="text" name='password' onChange={formik.handlechange} /> <br /><br /><br />
           <button type='submit'>Login</button>
       </form>
     </div>
