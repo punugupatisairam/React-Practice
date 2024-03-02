@@ -1,28 +1,36 @@
 import React from 'react'
-
+import { useFormik } from 'formik';
 
 function LoginForm(values) {
-    let formik = ({
-        intialvalues:{
-          firstname:'',
-          password:''
-        },
-        onsubmit:((values)=>{
-            console.log(values);
-        })
+
+
+    let formik = useFormik({
+      intialvalues:{
+        firstname:'',
+        password:''
+      },
+      onSubmit:((values)=>{
+          console.log(values);
+    }) 
     })
     console.log(formik);
   return (
     <div>
-      <form onSubmit={formik.handlesubmit} >
+      <form onSubmit={formik.handleSubmit} >
           <label htmlFor="">Name :</label>
-          <input type="text" name='firstname' onChange={formik.handlechange} /> <br /><br />
+          <input type="text" name='firstname' onChange={formik.handleChange} /> <br /><br />
           <label htmlFor="">Password :</label>
-          <input type="text" name='password' onChange={formik.handlechange} /> <br /><br /><br />
+          <input type="password" name='password' onChange={formik.handleChange} /> <br /><br /><br />
           <button type='submit'>Login</button>
       </form>
     </div>
+
   )
+
+
+  
+
 }
 
 export default LoginForm
+
