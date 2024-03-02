@@ -1,25 +1,20 @@
-.nav{
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
+table,tr,td{
+    border:2px solid;
+}
+img{
+    width:100px;   
+}
+.items{
     margin: 10px;
-   
+    width: 20%;
+    box-shadow: 1px 1px 1px 1px;  
+    text-align: center;
 }
 .mdiv{
+    /* width: 75%; */
     display: flex;
     justify-content: space-between;
-    border: 2px solid;
-    background-color: lemonchiffon;
-    height: 70px;
-}
-.navlist{
-    border-radius: 5px;
-    background-color: aqua;
-    padding: 5px;
-    margin: 5px;
-}
-.count{
-    background-color: chocolate;
-    padding: 5px;
-    border-radius: 5px;
+    flex-wrap: wrap;
+    margin: auto;
+    /* align-items: center; */
 }

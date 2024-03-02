@@ -3,7 +3,8 @@ import './App.css';
 import Header from './header';
 import Mainarea from './mainarea';
 import Footer from './footer';
-import Products from './products';
+// import Productsdata from './productsdata';
+import Dummydata from './Dummydata';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
      {/* <Header/>
      <Mainarea/>
      <Footer/> */}
+
+     {/* <Productsdata></Productsdata> */}
+     <Dummydata></Dummydata>
     </div>
   );
 }
