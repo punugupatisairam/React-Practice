@@ -1,7 +1,9 @@
 import React from 'react'
 
 function LoginForm() {
-    formik
+    let formik = ({
+        
+    })
     
   return (
     <div>LoginForm</div>
