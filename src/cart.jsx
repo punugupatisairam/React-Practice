@@ -26,8 +26,11 @@ function Cart({additem}){
                 )
             }) 
         }
-         <h1>Total : { additem?.reduce((sum,item)=>{
-            return sum+(item.quantity*item.price)
+   
+      
+         <h1>Total : {additem.reduce((sum,item)=>{
+            console.log(item.product.price);
+            return sum+(item.product.quantity*item.product.price)
          },0)} </h1>
         </>
     )
