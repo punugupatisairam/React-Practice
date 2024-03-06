@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Cart from './cart'
 
 function Dummydata() {
     let [products,setProducts] = React.useState([])
@@ -11,7 +10,6 @@ function Dummydata() {
             // console.log(res);
     
         },[])
-
     })
     function additem(newproduct){
 

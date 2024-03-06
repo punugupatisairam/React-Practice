@@ -5,6 +5,8 @@ import Mainarea from './mainarea';
 import Footer from './footer';
 // import Productsdata from './productsdata';
 import Dummydata from './Dummydata';
+import { Form } from 'formik';
+import FormCreation from './FormCreation';
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
      <Footer/> */}
 
      {/* <Productsdata></Productsdata> */}
-     <Dummydata></Dummydata>
+     {/* <Dummydata></Dummydata> */}
+     <FormCreation></FormCreation>
     </div>
   );
 }
