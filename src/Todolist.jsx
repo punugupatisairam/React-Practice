@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Operation from "./Operation";
 import Header from "./Headertodo";
+// import { log } from "console";
 
 function Todo(){
     // document.getElementById('update').innerHTML='Add Item'
@@ -21,7 +22,7 @@ function Todo(){
         let temp = [...todoitems]; 
         
         const statuschangeitem  = temp.map((item,i) => { 
-            console.log(index,i);
+            // console.log(index,i);
             if((index === i) && item.status === false){ 
                 return {...item, status:true}
                 
@@ -37,9 +38,10 @@ function Todo(){
     }
 
     const update = (index) => {
+
         let temp = todoitems.filter((item, ind) => index !== ind ); 
-        const edittedItem = temp.find((item, ind) => index === ind)
-        edittedItem.value = document.getElementById('inp').value;
+        const edittedItem = todoitems.find((item, ind) => index === ind)
+        edittedItem.title= document.getElementById('inp').value;
         setTODOITEMS([edittedItem, ...temp])
         setAction('Add Item')
     }
@@ -74,6 +76,7 @@ function Todo(){
     temp.splice(index,1)
     setTODOITEMS([...temp]) 
     }
+    console.log(todoitems);
 
     return ( 
     <div className="todo">

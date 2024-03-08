@@ -1,6 +1,7 @@
 import React from "react";
 
-function Operation(props){      
+function Operation(props){  
+
 return (
  <div className="todomaindiv" >
     <div className="newtodoitem1">
