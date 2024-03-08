@@ -258,8 +258,8 @@ function RegForm(props) {
           </div>
         </div>
         </div>
-        <div class="col-12 d-flex justify-content-center">  
-        <button type="submit" class="btn btn-primary btn-lg w-5">Save</button>
+        <div class="row d-flex justify-content-center mt-0">  
+        <button type="submit" class="btn btn-primary btn-sm col-2 p-2">Save</button>
         </div>
       </form>  
   );

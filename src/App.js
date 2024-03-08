@@ -12,7 +12,9 @@ function App() {
 
 return (
  <div>
+  <Headerform></Headerform>
  <Outlet> </Outlet>
+ 
  {/* <RegForm></RegForm> */}
   {/* <LoginForm> </LoginForm>
   <StudentDetails></StudentDetails>
