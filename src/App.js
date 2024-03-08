@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginForm from './LoginForm';
+import { Outlet } from 'react-router';
+
 
 function App() {
   return (
     <div className="App">
-      <LoginForm></LoginForm>
+      <Outlet></Outlet>
     </div>
   );
 }

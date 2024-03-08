@@ -2,12 +2,13 @@ import { useFormik } from 'formik'
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import * as Yup from 'yup';
-import { spawn } from 'child_process';
+import { Link } from 'react-router-dom';
+// import { spawn } from 'child_process';
 
 function LoginForm() {
     const validations = Yup.object({
         username:Yup.string().required('Enter Your Name'),
-        password:Yup.object().required('password required')
+        password:Yup.string().required('password required')
     })
     // console.log(validations);
     let userformik = useFormik({
@@ -39,7 +40,7 @@ console.log(userformik);
 
              </div><br /><br />
              <div class='d-flex justify-content-center'> 
-             <button type='submit' class='btn btn-primary btn-lr rounded mb-4'>Login</button>
+             <Link to='/data'><button type='submit' class='btn btn-primary btn-lr rounded mb-4'>Login</button> </Link> 
              </div>
         </form>
     </div>
