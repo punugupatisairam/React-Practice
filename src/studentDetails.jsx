@@ -12,8 +12,6 @@ function checkForm(values){
  }
 
 function StudentDetails() {
-
-
     let formik = useFormik({
         initialValues : {
             firstname:'',
@@ -33,7 +31,7 @@ function StudentDetails() {
         <h1> form handling using useFormik Hook </h1>
         <form onSubmit={formik.handleSubmit}>
             <label htmlFor="">firstname</label>
-            <input type="text" name="firstname" id="" onChnage={formik.handleChange} /> <br /><br />
+            <input type="text" name="firstname" id="" onChange={formik.handleChange} /> <br /><br />
             <div>{formik.errors.firstname}</div>
             <label htmlFor="">lastname</label>
             <input type="text" name="lastname" id="" onChange={formik.handleChange}/> <br /><br />

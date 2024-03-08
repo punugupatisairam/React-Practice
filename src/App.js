@@ -1,14 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import RegForm from './RegForm';
+import Headerform from './Headerform';
+import { Outlet } from 'react-router-dom';
 // import { Formik, useFormik } from 'formik';
-import { Formik } from 'formik';
-import StudentDetails from './studentDetails';
+// import { Formik } from 'formik';
+// import StudentDetails from './studentDetails';
+// import LoginForm from './LoginForm';
 
 
 function App() { 
 
 return (
  <div>
+ <Outlet> </Outlet>
+ {/* <RegForm></RegForm> */}
+  {/* <LoginForm> </LoginForm>
   <StudentDetails></StudentDetails>
 <Formik
   initialValues = {{'fn':'','ln':'','age':''}} 
@@ -31,7 +37,7 @@ return (
       )   
     }
   } 
-</Formik>
+</Formik> */}
  </div>
 
 )
