@@ -2,10 +2,12 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {  useFormik } from "formik";
 import { connect } from "react-redux";
-import store from "./store";
+import store from "./store/store";
+// import { log } from "console";
 
 
 function LoginForm(props) {
+  // console.log(props);
 
     const userformik = useFormik({
         initialValues:{
@@ -13,9 +15,11 @@ function LoginForm(props) {
             'password':''
         },
         onSubmit :(values)=>{
-            console.log(values);
+            // console.log(values);
+            props.dispatch({type:'ADD',payload:values})
         }
     })
+    // console.log(userformik);
   return (
     <div class='rounded shadow w-25 d-flex justify-content-center mdiv'>
       <form class="form-floating " onSubmit={userformik.handleSubmit}><br /> <br />
