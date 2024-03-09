@@ -1,9 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {  useFormik } from "formik";
-import { connect } from "http2";
+import { connect } from "react-redux";
+import store from "./store";
 
-function LoginForm() {
+
+function LoginForm(props) {
 
     const userformik = useFormik({
         initialValues:{
@@ -47,4 +49,4 @@ function LoginForm() {
   );
 }
 
-export default  connect() (LoginForm);
+export default connect(store=>store)(LoginForm);
