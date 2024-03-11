@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
+import Todolist from './Todolist';
+import Products from './Products';
+import { Outlet } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <Counter></Counter>
+     <Todolist></Todolist>
+     <Products></Products> */}
+    
+
+     <Link to='count'> <span>Counter</span> </Link> &nbsp;&nbsp;
+     <Link to='todos'> <span>Todolist</span> </Link> &nbsp;&nbsp;
+     <Link to='prods'> <span>Products</span> </Link> &nbsp;&nbsp;
+     <Link to='newprod'> <span>NewProducts</span> </Link> <br/> <br/>
+     <Outlet></Outlet>
     </div>
   );
 }
