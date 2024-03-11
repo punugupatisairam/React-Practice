@@ -11,13 +11,13 @@ import FormCreation from './FormCreation';
 function App() {
   return (
     <div className="" >
-     {/* <Header/>
+     <Header/>
      <Mainarea/>
-     <Footer/> */}
+     <Footer/>
 
      {/* <Productsdata></Productsdata> */}
      {/* <Dummydata></Dummydata> */}
-     <FormCreation></FormCreation>
+     {/* <FormCreation></FormCreation> */}
     </div>
   );
 }
