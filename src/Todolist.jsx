@@ -14,16 +14,17 @@ function Todolist(props) {
     <div className="mystyle"> 
       <input type="text" onChange={(event) => {return setNewtodo(event.target.value);}}/>
       <button onClick={() => { props.dispatch({ type: "ADDTODO", payload: newtodo });}}>Add Todo</button><br />
+      
       <input type="radio" name='filter' value='All' onChange={(event)=>updatefilter(event)} />:All Todos
-      <input type="radio" name='filter' value='Done'  onChange={(event)=>updatefilter(event)} />:Completed
-      <input type="radio" name='filter' value='NotDone'  onChange={(event)=>updatefilter(event)} />:Pending
+      <input type="radio" name='filter' value='DONE'  onChange={(event)=>updatefilter(event)} />:Completed
+      <input type="radio" name='filter' value='NOTDONE'  onChange={(event)=>updatefilter(event)} />:Pending
 
 
       { props.todolist.filteredTodos?.map((todo,i) => { 
         return ( 
           <div> 
             <span> 
-              <span className={todo.status && 'strike'}>{todo.title}</span>    
+              <span style={{textDecoration:todo.status && 'line-through' }}>{todo.title}</span>    
               <button onClick={()=>{props.dispatch({type:"DELETE",payload:i})}}>Delete</button> 
               <button onClick={()=>{props.dispatch({type:"DONE",payload:todo.title})}}>Done</button> 
             </span>
