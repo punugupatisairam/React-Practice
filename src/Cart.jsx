@@ -21,18 +21,17 @@ function Cart(props) {
                     <img className='cartimg' src={each.images[0]} alt="" /> 
                     <div className='ms-4'> 
                     <span>{each.brand} - </span> 
-                    <span>{each.title}</span> <br /> <br />
+                    <span>{each.title}</span> <br /> <br /> 
                     <span>Price :<i class="bi bi-currency-rupee"></i> {each.price}</span> <br />  <br />
                     <span>Quantity : <button class='btn btn-info rounded' onClick={(each)=>{dec(each)}}>-</button > {each.quantity=1} <button class='btn btn-success rounded' onClick={(each)=>{inc(each)}}>+</button></span>
                     </div>
-                </div> )
-
+                </div> ) 
             })
         }
-    </div>
+    </div> 
 
     <div class='w-50 mt-3 ms-5'>
-        <div class='border rounded p-5 pricediv'>
+        <div class='border rounded p-5 pricediv'> 
         <h1>Total Price </h1> <br />
         <h3>SubTotal ({props.prod.addcart.length}):-<i class="bi bi-currency-rupee"></i>{props.prod.addcart.reduce((accu,item)=>accu+item.price,0)}</h3><br />
         <div class='d-flex justify-content-center'>
@@ -42,7 +41,7 @@ function Cart(props) {
         </div>
       
     </div>
-    </div>
+    </div> 
   )
 }
 
