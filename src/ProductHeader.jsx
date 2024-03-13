@@ -8,7 +8,7 @@ function ProductHeader(props) {
   return (
     <div class='d-flex justify-content-end headdiv'>
     
-    <button class='btn btn-warning rounded'><span style={{listStyleType:'none'}} class="bi bi-cart3"> - {props.prod.addcart.length}</span></button>
+    <button class='btn btn-warning rounded'><span style={{listStyleType:'none'}} class="bi bi-cart3"> ({props.prod.addcart.length})</span></button>
 
     </div>
   )

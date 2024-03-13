@@ -3,23 +3,11 @@ import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Cart(props) {
-// var [newone,setNewone] = React.useState(0)
-    // console.log(props);
+
     function inc(each){
-            // var temp = [...props.prod.addcart]
-            // console.log(temp);
-            // temp=temp.map((titem)=>{
-            //     // console.log(temp);
-            //         if(titem.id==each.id){
-            //             each.quantity=each.quantity+1;
-                        
-            //         }
-            //         return titem
-            // })
-            // setNewone(newone+1)
-            // console.log(newone);
-            console.log('hai');
-           }
+        
+    }
+        
     function dec(){
             
     }
@@ -36,7 +24,6 @@ function Cart(props) {
                     <span>{each.title}</span> <br /> <br />
                     <span>Price :<i class="bi bi-currency-rupee"></i> {each.price}</span> <br />  <br />
                     <span>Quantity : <button class='btn btn-info rounded' onClick={(each)=>{dec(each)}}>-</button > {each.quantity=1} <button class='btn btn-success rounded' onClick={(each)=>{inc(each)}}>+</button></span>
-                
                     </div>
                 </div> )
 
