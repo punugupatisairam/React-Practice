@@ -7,15 +7,6 @@ import ProductHeader from './ProductHeader';
 
 function Products(props) {
     console.log(props);
-    // function addcart(e){
-    //   if(e.target.innerHTML==='Add to Cart  '){
-    //       e.target.innerHTML='go to cart'
-    //   }else
-    //   {
-    //     e.target.innerHTML='Add to Cart  '
-    //   }
-      
-    // }
   return (
      <div class='d-flex justify-content-center flex-wrap'>
 
