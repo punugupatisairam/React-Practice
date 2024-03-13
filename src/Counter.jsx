@@ -17,4 +17,4 @@ function Counter(props) {
 }
 function mapstatetoprops(state){return state.counter}
 function mapdispatchtoprops(dispatch){return {dispatch:dispatch}}
-export default connect(mapstatetoprops,mapdispatchtoprops) (Counter)
+export default connect(mapstatetoprops,mapdispatchtoprops) (Counter) 
