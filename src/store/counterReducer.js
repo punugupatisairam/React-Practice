@@ -9,7 +9,7 @@ const counterReducer = (state=initialState,action)=>{
             return {...state,count:state.count-1} 
         }
         if(action.type==='RESET'){
-            return {...state,count:state.count=initialState.count}  
+            return {...state,count:initialState.count}  
         }
         return state
 }

@@ -11,7 +11,7 @@ function Todolist(props) {
         <button onClick={()=>{props.dispatch({type:'ADDTODO',payload:newtodo})}}>Add Task</button>
 
         {
-            props.todolist.todos?.map((todo)=>{
+            props.todos?.map((todo)=>{
                 // console.log(todo);
                 return <li>{todo}</li> 
             })
@@ -19,5 +19,6 @@ function Todolist(props) {
     </div>
   )
 }
-
-export default connect(store=>store) (Todolist)
+function mapstatetoprops(state){return state.todolist}
+function mapdispatchtoprops(dispatch){return {dispatch:dispatch}}
+export default connect(mapstatetoprops,mapdispatchtoprops) (Todolist)
