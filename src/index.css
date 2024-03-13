@@ -4,14 +4,25 @@
 }
 img{
   width: 150px;
+  height: 150px;
 }
 .headdiv{
   position: sticky;
   top: 0px;
   right: 5px;
-  
+
 }
 .cartimg{
-  width: 100px;
-  height: 100px;  
+  width: 150px;
+  height: 150px;  
+}
+.iterativediv{
+  width: 70%;
+  height: 30%;
+}
+.pricediv{
+  width: 70%;
+}
+.addcartbut{
+  margin: 0 auto;
 }

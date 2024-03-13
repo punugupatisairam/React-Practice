@@ -7,6 +7,15 @@ import ProductHeader from './ProductHeader';
 
 function Products(props) {
     console.log(props);
+    // function addcart(e){
+    //   if(e.target.innerHTML==='Add to Cart  '){
+    //       e.target.innerHTML='go to cart'
+    //   }else
+    //   {
+    //     e.target.innerHTML='Add to Cart  '
+    //   }
+      
+    // }
   return (
      <div class='d-flex justify-content-center flex-wrap'>
 
@@ -17,8 +26,10 @@ function Products(props) {
                         <span>Brand : {product.brand}</span> <br />
                         <span>Title : {product.title}</span> <br />
                         <span>Price :<i class="bi bi-currency-rupee"></i> {product.price}</span> &nbsp; &nbsp;
-                        <span>Rating : {product.rating}</span> <br />
-                       <button class='btn btn-warning rounded' onClick={()=>{props.dispatch({type:'ADD',payload:product})}}>Add to Cart<i class="bi bi-cart3"></i> </button>
+                        <span>Rating : {product.rating}</span> <br /> <br />
+                        <div className='addcartbut'>
+                        <button class='btn btn-warning rounded' onClick={()=>{props.dispatch({type:'ADD',payload:product})}}>Add to Cart  <i class="bi bi-cart3"></i> </button>
+                        </div>
                      </div> )
             })
             
