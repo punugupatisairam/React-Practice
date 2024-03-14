@@ -13,6 +13,7 @@ import Products from './Products';
 import Loginpage from './Loginpage';
 import Cart from './Cart';
 import ProductHeader from './ProductHeader';
+import Orderplaced from './Orderplaced';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path:'cart',
         element:<Cart></Cart> 
+      },
+      {
+        path:'orderplaced',
+        element:<Orderplaced></Orderplaced>
       }
     ]
   },

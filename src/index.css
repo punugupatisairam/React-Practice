@@ -1,6 +1,6 @@
 .mdiv{
   margin: 0 auto;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 img{
   width: 150px;
@@ -18,11 +18,17 @@ img{
 }
 .iterativediv{
   width: 70%;
-  height: 30%;
+  height: 300px;
 }
 .pricediv{
   width: 70%;
 }
 .addcartbut{
   margin: 0 auto;
+}
+.orderdiv{
+  margin: 0 auto;
+  margin-top: 7%;
+  padding: 10%;
+
 }
