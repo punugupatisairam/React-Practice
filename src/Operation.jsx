@@ -4,6 +4,7 @@ function Operation(props){
 
 return (
  <div className="todomaindiv" >
+
     <div className="newtodoitem1">
     <span className="data"> {props.todo.title}</span>  &nbsp;&nbsp; 
     <span className="status"> {props.todo.status?<i class="bi bi-check-square"></i>:('Pending')}</span>

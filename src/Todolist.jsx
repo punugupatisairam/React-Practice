@@ -1,26 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef } from "react"; 
 import Operation from "./Operation";
 import Header from "./Headertodo";
 // import { log } from "console";
 
 function Todo(){
-    // document.getElementById('update').innerHTML='Add Item'
-    
-    var [todoitems,setTODOITEMS] = React.useState([]);
-    var [action, setAction] = React.useState('Add Item');
-    var [operatingId, setOperatingId] = React.useState()
 
-    const addtodo = ()=>{
-        var newobj = {
-            title:document.getElementById('inp').value,
-            status:false,
+    // document.getElementById('update').innerHTML='Add Item' 
+    
+    var [todoitems,setTODOITEMS] = React.useState([]); 
+    var [action, setAction] = React.useState('Add Item'); 
+    var [operatingId, setOperatingId] = React.useState(); 
+
+    const addtodo = ()=>{  
+        var newobj = { 
+            title:document.getElementById('inp').value, 
+            status:false, 
         }
-        setTODOITEMS([...todoitems,newobj]) 
+        setTODOITEMS([...todoitems,newobj])  
     }
 
     function statusDone(index){
         let temp = [...todoitems]; 
-        
         const statuschangeitem  = temp.map((item,i) => { 
             // console.log(index,i);
             if((index === i) && item.status === false){ 
@@ -79,7 +79,7 @@ function Todo(){
     console.log(todoitems);
 
     return ( 
-    <div className="todo">
+    <div className="todo"> 
         <Header ar={todoitems}  /> 
         <h1 className="addtodotext" >📝 Add Your Todo's : 📝 </h1>
         <div className="inpdiv">
@@ -87,7 +87,7 @@ function Todo(){
         <button  class="form-control bg-warning " id="additem" onClick={()=>{action === 'Update' ? update(operatingId) : addtodo()}}>{action}</button>
         
         {/* <button  class="form-control bg-warning " id="update" onClick={()=>{addtodo()}}>Update</button> */}
-        <h1 className="newtodotext">All Your Todo's :</h1>
+        <h1 className="newtodotext">All Your Todo's :</h1> 
         </div>
         <ul>
             {
