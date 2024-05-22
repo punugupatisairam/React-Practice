@@ -23,7 +23,7 @@ function Products(props) {
                         <span>Rating : {product.rating}</span> <br /> <br />
                         <div className='addcartbut' >
                        {!product.inCart &&  <button class='btn btn-warning rounded'  onClick={()=>{props.dispatch({type:'ADD',payload:i})}}>Add to Cart  <i class="bi bi-cart3"></i> </button>}
-                       {product.inCart &&  <Link to='/cart'> <button class='btn btn-warning rounded'  >Go to Cart  <i class="bi bi-cart3"></i> </button></Link>}
+                       {product.inCart &&  <Link to='/cart'> <button class='btn btn-warning rounded'>Go to Cart<i class="bi bi-cart3"></i> </button></Link>}
                         
                         </div>
                      </div> )

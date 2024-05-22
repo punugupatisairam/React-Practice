@@ -29,8 +29,8 @@ function Cart(props) {
                     <span>Quantity : <button class='btn btn-info rounded' onClick={()=>{dec(each,i)}}>-</button > {each.quantity} <button class='btn btn-success rounded' onClick={()=>{inc(each,i)}}>+</button></span>
                     </div>
                 </div> ) 
-            })
-        }
+            }) 
+        }  
     </div> 
 
     <div class='w-50 mt-3 ms-5'>
