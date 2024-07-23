@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom';
 import ProductHeader from './ProductHeader';
 
+
 function Products(props) {
     console.log(props);
   return (
@@ -16,7 +17,7 @@ function Products(props) {
         {
             props.prod.products.map((product,i)=>{
                 return ( <div class='w-25 rounded shadow m-3 text-center p-4'> 
-                        <img src={product.images[0]} alt="" /> <br /> <br />
+                        <img src={product.images[0]} alt="please wait for the image" /> <br /> <br />
                         <span>Brand : {product.brand}</span> <br />
                         <span>Title : {product.title}</span> <br />
                         <span>Price :<i class="bi bi-currency-rupee"></i> {product.price}</span> <br />
