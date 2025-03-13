@@ -2,6 +2,7 @@ import React from 'react'
 
 function Counter() {
     var [count,setCount] = React.useState(0)
+    var [res,setRes] = React.useState("");
     function inc() {
         setCount(count+1)
     }
@@ -15,6 +16,9 @@ function Counter() {
         <button onClick={()=>{inc()}}>Incerment</button>
         <button onClick={()=>{dec()}}>Decerment</button>
     </div>
+
+    
+
   )
 }
 

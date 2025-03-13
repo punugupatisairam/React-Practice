@@ -12,6 +12,8 @@ import Header from './Header';
 import Todolist from './Todolist';
 import Countries from './Countries';
 import CountryDetails from './CountryDetails';
+import myapicall from './Myapicall';
+import Myapicall from './Myapicall';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
               element:<CountryDetails></CountryDetails>
           }
       ]
+      },
+      {
+        path:'myapicall',
+        element:<Myapicall/>
       }
     ]
   },

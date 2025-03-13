@@ -9,7 +9,8 @@ function App() {
         <Link to='counter'>Counter</Link>&nbsp;&nbsp;
         <Link to='header' >Header</Link> &nbsp;&nbsp;
         <Link to='todolist'>TodoList</Link> &nbsp;&nbsp;
-        <Link to='countries' >Countries</Link>
+        <Link to='countries' >Countries</Link>&nbsp;&nbsp;
+        <Link to='myapicall' >API call</Link>
 
         <br/>   <br/>
         <Outlet/>
